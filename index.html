@@ -1,14 +1,240 @@
-
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>My Static Website</title>
-  </head>
-  <body>
-    <h1>JAYAM Catering</h1>
-    <p>
-      Hello, I'm online, and everyone can see me!
-    </p>
-  </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAYAM Catering</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 3.5em;
+        }
+        .hero p {
+            font-size: 1.5em;
+        }
+        .hero button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #f4b400;
+            border: none;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 20px;
+            text-align: center;
+        }
+        section h2 {
+            margin-bottom: 20px;
+            font-size: 2.5em;
+        }
+
+        /* About Us */
+        #about {
+            background-color: #f4f4f4;
+        }
+
+        /* Menu */
+        #menu .menu-item {
+            display: inline-block;
+            margin: 20px;
+            text-align: left;
+        }
+        #menu img {
+            width: 250px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        #menu .menu-item p {
+            font-size: 1.2em;
+        }
+
+        /* Services */
+        #services {
+            background-color: #f4f4f4;
+        }
+        #services .service-item {
+            display: inline-block;
+            margin: 20px;
+        }
+
+        /* Testimonials */
+        #testimonials {
+            background-color: #333;
+            color: #fff;
+        }
+        #testimonials .testimonial-item {
+            display: inline-block;
+            margin: 20px;
+        }
+
+        /* Contact */
+        #contact form {
+            display: inline-block;
+            text-align: left;
+        }
+        #contact label, #contact input, #contact textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        #contact input, #contact textarea {
+            padding: 10px;
+        }
+        #contact button {
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div>
+            <h1>Welcome to JAYAM Catering</h1>
+            <p>Delicious Catering for All Occasions</p>
+            <button onclick="document.querySelector('#contact').scrollIntoView()">Book Now</button>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>JAYAM Catering offers top-quality catering services for weddings, corporate events, private parties, and more. Our delicious, carefully crafted menus will make your event memorable.</p>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <img src="https://via.placeholder.com/250x150" alt="Menu Item 1">
+            <p><strong>Biryani</strong> - A flavorful rice dish made with aromatic spices and herbs.</p>
+        </div>
+        <div class="menu-item">
+            <img src="https://via.placeholder.com/250x150" alt="Menu Item 2">
+            <p><strong>Paneer Butter Masala</strong> - A creamy and rich dish made with paneer cubes and a tomato-based gravy.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <h3>Wedding Catering</h3>
+            <p>We provide luxurious wedding catering services with an exquisite menu and professional setup.</p>
+        </div>
+        <div class="service-item">
+            <h3>Corporate Events</h3>
+            <p>Our corporate catering services ensure a seamless and tasty experience for your business events.</p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-item">
+            <p>"JAYAM Catering made our wedding unforgettable. The food was delicious and the service was top-notch!"</p>
+            <p>- Happy Customer</p>
+        </div>
+        <div class="testimonial-item">
+            <p>"Professional, timely, and the food was outstanding. Highly recommend them for corporate events!"</p>
+            <p>- Satisfied Client</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form action="mailto:your-email@example.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 JAYAM Catering. All rights reserved.</p>
+    </footer>
+
+</body>
 </html>
